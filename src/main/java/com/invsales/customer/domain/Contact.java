@@ -77,44 +77,6 @@ public class Contact implements Serializable {
 		this.customer = customer;
 	}
 
-	@Override
-	public String toString() {
-		return "Contact [contactId=" + contactId + ", type=" + type + ", contactText=" + contactText + ", customer="
-				+ customer + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + contactId;
-		result = prime * result + ((contactText == null) ? 0 : contactText.hashCode());
-		result = prime * result + ((type == null) ? 0 : type.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Contact other = (Contact) obj;
-		if (contactId != other.contactId)
-			return false;
-		if (contactText == null) {
-			if (other.contactText != null)
-				return false;
-		} else if (!contactText.equals(other.contactText))
-			return false;
-		if (type == null) {
-			if (other.type != null)
-				return false;
-		} else if (!type.equals(other.type))
-			return false;
-		return true;
-	}
+	
 
 }
